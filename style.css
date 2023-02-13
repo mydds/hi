@@ -409,7 +409,7 @@ nav a:hover {
 
 
 .dark-mode .word:hover {
-    background: url(img/brushes/brush8.svg);
+    background: url(./img/brushes/brush8.svg);
     /*background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=FCFFA0);  other colors to use 92D8FF, A0FFd3*/
         margin: -3px -3px;
         padding:  3px  3px;
@@ -418,7 +418,7 @@ nav a:hover {
 }
 
 .dark-mode .static:hover {
-    background: url(img/brushes/brush8.svg);
+    background: url(./img/brushes/brush8.svg);
     /*background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=FCFFA0);  other colors to use 92D8FF, A0FFd3*/
         margin: -3px -3px;
         padding:  3px  3px;

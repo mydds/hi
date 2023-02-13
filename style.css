@@ -1,0 +1,590 @@
+
+body {
+    margin: 0;
+    /*width: 100%;
+    height: 100%;*/
+    background-color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Rubik', sans-serif;   Or Avenir, Quicksand, Inter, Rubik, Roboto*/
+    font-weight: 300;
+    color: #999;
+    /*    font-family: "chaparral-pro-caption";
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    background-image: url(../img/tiles.png);
+    background-repeat: repeat;
+    overflow-x: hidden;*/
+}
+    
+.container {
+    max-width: 1600px;
+    width: 87%; 
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 20px;
+    }
+
+.text {
+    font-size: 21px;
+    line-height: 1.5;
+    }
+
+.word {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+    
+    /*highlight instead of underline below
+        background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=A0FFd3); /* other colors to use 92D8FF, FCFFA0, A0FFd3
+        margin: -2px -3px;
+        padding:  1px  3px;
+    text-decoration:none;*/
+    
+    /*Attempted shade instead of underline below
+    background-color: #edeafd;
+    box-shadow: 0px -0px 9px rgba(0,0,10,0);
+    position: relative;
+    text-decoration: none;
+    height:18px;*/
+    
+  /*transition: background-color 1000ms;
+   transition: background-color 300ms cubic-bezier(0.19, 1, 0.22, 1);*/
+}
+
+.word.highlight {
+    background-color: #44ffb0;
+    transition: background-color 3000ms;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+   /* box-shadow: inset 0 -4px 0 #44ffb0, inset 0 -6px 0 #44ffb0;
+    transition: background-color 2000ms cubic-bezier(0.19, 1, 0.22, 1);  
+    position: relative;
+    opacity: 1;*/
+}
+
+
+.word:hover {
+ /* box-shadow: 0 0 0 2px lightblue;*/
+    /*box-shadow: inset 0 -4px 0 #92D8FF, inset 0 -6px 0 #92D8FF;*/
+    /*THIS IS THE ORIGINAL BOX HIGHLIGHT BELOW*/
+    color: #FFFFFF;
+    background-color: #92D8FF;
+    box-shadow: 0px -1px 9px rgba(0,0,0,.5);
+    position: relative;
+    opacity: 1;
+    text-decoration: none;
+    
+     /*MARKER highlight instead of lightblue hover box below
+        background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=A0FFd3); 
+        margin: -2px -3px;
+        padding:  1px  3px;
+    text-decoration:none;
+    color:dimgray;*/
+    /* other colors to use for marker 92D8FF, FCFFA0, A0FFd3*/
+}
+
+.popup {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+    .popup-word {
+      font-size: 16px;
+      font-family: Avenir Next;
+      margin: 20px;
+        padding-left:20px;
+      text-align: left;
+      position: absolute;
+      top: -80px; /* adjust as needed */
+      left: 180px; /* adjust as needed */
+      width: 120px;
+      background-color:white;
+      color:dimgray;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+       /*      border: 1px solid #ccc;
+        transform: translate(40px, -70px);
+z-index: 1;
+        /*overflow-y:hidden;
+        text-overflow:auto;
+        overflow:auto;
+         width:200px;*/
+    
+    }
+ 
+
+    .popup-text {
+     /* font-size: 18px;*/
+        font-size: 15vm;
+      margin:25px;
+      left:-50px;
+      text-align: left;
+        top: 75%;
+        max-width:450px;
+        /*max-width: 20vm;*/
+    }
+
+    .popup-image {
+     /* margin: 10px;*/
+      object-fit: cover;
+      /*width: 250px;*/
+        width:30vw;
+        max-width:300px;
+      background-color: transparent;
+        background:none;
+      border:none;
+        box-shadow: 0 0 0px rgba(0,0,0,.3);
+      /*  box-shadow: 0px 0px 20px rgba(0,0,0,.3);*/
+    }
+
+    .popup-grid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      max-width: 85%;
+      max-height: 85%;
+      background-color: transparent;
+      border:none;
+      background-color: none;
+      box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+        top: 75%;
+      /*position: absolute;*/
+    }
+
+    .popup-grid-item {
+      object-fit: cover;
+      height: 10vw;
+      width: 10w;
+      border: none;
+      background-color: transparent;
+      padding: 0px;
+      margin: 5px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+     /* top: 75%; /*added in to change positioning of photos popup, orig 500px
+      left: 25%; /*added in to change positioning of photos popup, orig 100px*/
+         /* position: absolute;*/
+}
+
+/*For adding Circular grid popups below -- ORIGINAL*/
+    .popup-grid2 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-width: 75%;
+      max-height: 75%;
+      background-color: transparent;
+      border:none;
+      box-shadow: 0px 0px 0px rgba(0,0,0,0);
+      top: 75%;
+    }
+
+    .popup-grid2-item {
+      object-fit: cover;
+      height: 10vw;
+      width: 10vw;
+        min-width: 100px;
+    min-height: 100px;
+      background-color: white;
+      padding: 0px;
+      margin: 2px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+      border-radius: 50%;
+
+}
+
+
+.popup-grid2-text {
+    font-size: 13px;
+    width: 180px;
+    background-color: black;
+    color: azure;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+    /* Add some margin to separate the textbox from the image */
+    margin-bottom: 5px;
+}
+    
+
+
+/*For adding grid of images that popup above*/
+    .popup-gridabove {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      background-color: transparent;
+      max-width:450px; /*To make the grids align nicer*/
+      /*max-height:85%;*/
+      box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+      transform: translate(-10%, -58%);
+      /* max-width: 500px;
+         max-height: 500px;
+         top:-70%;
+        bottom:50%;
+        transform: translate(-50%, -100%);
+        top: -100%;  adjust as needed 
+        left: 0;
+        align-items: flex-start;   
+        padding: 10px;
+        border-radius: 5px;
+        bottom: 99%;
+        top: auto;
+        position: absolute;*/
+    }
+
+    .popup-gridabove-item {
+      object-fit: cover;
+        height:8vw;
+        width: 8vw;
+        max-width:150px; /*To make the grids align nicer*/
+     /* max-height: 25%;
+      max-width: 25%; */
+      background-color: transparent;
+      margin: 8px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,.3); 
+     /* top: 75%; /*added in to change positioning of photos popup, orig 500px
+      left: 25%; /*added in to change positioning of photos popup, orig 100px*/
+         /* position: absolute;*/
+}
+    
+.popup-image-text {
+      background-color: transparent;
+      border:none;
+      box-shadow: 0px 0px 0px rgba(0,0,0,0);
+}
+
+.popup-image-text-image {
+      object-fit: cover;
+      width: 200px;
+      background-color: transparent;
+      border:none;
+      box-shadow: 0px 0px 20px rgba(0,0,0,.5);  
+}
+
+.popup-image-text-text {
+  /* Add a background color and padding to the textbox */
+    background-color: black;
+    color: azure;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+    /* Add some margin to separate the textbox from the image */
+    margin-top: 10px;
+}
+
+
+a:link {
+  color: #999;
+}
+
+/* selected link */
+a:visited {
+  color: dimgray;
+    
+}
+
+a:hover {color:lightsteelblue;}
+
+.popup-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.popup-circle img {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  min-width: 120px;
+    min-height: 120px;
+  background-color: transparent;
+  position: absolute;
+  top: 70%;
+  left:50%;
+  object-fit: cover;
+  height: 15vw;
+  width: 15vw;
+      
+}
+
+
+/*Before this below was min-width:1200px, im doing a test to change it to 1000*/
+@media (min-width: 1100px) {
+  .container {
+    width: 78%;
+      align-content: center;
+      margin: 0 auto;
+      margin-top:35px;
+
+  }
+}
+
+
+@media (max-width: 1100px) { /* If the viewport width is less than 1000px */
+    .text {
+        font-size: 2vw; /* Set the font size to 10% of the viewport width */
+        line-height: 1.5;
+  }
+    .container {
+        width: 83%;
+        margin: 0 auto;
+        padding: 1vm;
+        margin-top: 25px;
+        align-content: center;
+        /*margin: 1vm;*/
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+  /* Add your mobile-specific styles here */
+  
+ .container {
+        /*width: 75%;*/
+        margin: 0 auto;
+        padding: 2vm;
+        margin-top: 20px;
+    }
+    .text {
+    font-size: 2.5vw;
+    line-height: 1.5;
+    }
+    
+/*
+.word {
+    cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+   font-size:2.5vw;
+} */
+    
+
+
+}
+
+
+/*Navbar initial below
+.navbar {
+  height: 20px;
+  background-color: ghostwhite;
+  display: flex;
+  align-items: center;
+}*/
+
+.navbar-homeicon {
+  height: 20px;
+  margin-left: 20px;
+}
+
+
+/*Navbar new below*/
+nav {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 20px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 20px;
+  text-decoration: none;
+  color: dimgray;
+  font-size: 12px;
+}
+
+nav a:hover {
+  background-color: lightgray;
+}
+
+/*Dark Mode below*/
+.dark-mode {
+  background-color: #1c1c1c;
+  color: aliceblue;
+}
+
+
+.dark-mode .word:hover {
+    background: url(/img/brushes/brush8.svg);
+    /*background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=FCFFA0);  other colors to use 92D8FF, A0FFd3*/
+        margin: -3px -3px;
+        padding:  3px  3px;
+    color:dimgray;
+    text-decoration:none;
+}
+
+.dark-mode .static:hover {
+    background: url(/img/brushes/brush8.svg);
+    /*background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=FCFFA0);  other colors to use 92D8FF, A0FFd3*/
+        margin: -3px -3px;
+        padding:  3px  3px;
+    color:dimgray;
+    text-decoration:none;
+}
+
+.dark-mode .popup-text {
+  background-color: #000;
+  color: aliceblue;
+  /* border: 1px solid #ccc;*/
+}
+
+.dark-mode .popup-word {
+  background-color: #2c2c2c;
+  color: aliceblue;
+}
+
+.dark-mode nav {
+  background-color: aliceblue;
+  color: black;
+}
+
+
+.dark-mode a:visited {
+  /*color: cadetblue;*/
+    color: lightgray;
+    
+}
+
+.static {
+  color: inherit; /* Use the same text color as the parent element */
+  text-decoration: underline; /* Add an underline to indicate that it's a link */
+  cursor: pointer; /* Show a pointer cursor when hovering */
+   
+}
+
+.static:hover {
+   /* color: #FFFFFF;
+    background-color: #92D8FF;
+    box-shadow: 0px -1px 9px rgba(0,0,0,.5);
+    position: relative;
+    opacity: 1;
+    text-decoration: none;*/
+    background: url(img/brushes/pen-brushes.svg);
+       /* background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=A0FFd3);  other colors to use 92D8FF, A0FFd3*/
+        margin: -3px -3px;
+        padding:  3px  3px;
+    color:dimgray;
+    text-decoration:none;
+}
+
+.static-popup {
+  /* Add styles to match the rest of your site */
+  background-color: white;
+  border: 7px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% - 10px);
+}
+
+.static-close-button {
+  /* Add styles for the close button */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.static.highlight {
+    background-color: #44ffb0;
+    transition: background-color 2000ms;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+
+
+/* Add a style for the loading screen element */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-screen {
+  /* Other styles for the loading screen */
+  transition: opacity 1s;
+}
+
+.marker {
+    background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=A0FFd3);
+        margin: -2px -6px;
+        padding:  2px  6px;
+   
+    
+}
+
+::selection {
+  color: gray;
+  background: #A0FFd3;
+}
+
+
+
+/*DARK MODE TOGGLE CODE BELOW*/
+.dark-mode-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+    
+}
+
+.dark-mode-toggle__checkbox {
+  display: none;
+}
+
+.dark-mode-toggle__label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ccc;
+    /*background: url(/images/moon.svg); 
+        background-size:18px;*/
+    /*background: ('/images/moon.svg');*/
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
+}
+
+.dark-mode-toggle__label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.dark-mode-toggle__checkbox:checked + .dark-mode-toggle__label {
+  background-color: #666;
+}
+
+.dark-mode-toggle__checkbox:checked + .dark-mode-toggle__label::before {
+  transform: translateX(19px);
+}
+
+
+/*body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}*/

@@ -379,7 +379,7 @@ a:hover {color:lightsteelblue;}
     }
     
   .popup-image {
-    width: 70%;
+    width: 75%;
     max-width: 300px;
       top:75%;
   }
@@ -399,8 +399,8 @@ a:hover {color:lightsteelblue;}
   .popup-grid-item {
     height: 20vw;
     width: 20vw;
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 130px;
+    max-width: 130px;
     margin: 5px;
   }
    .popup-gridabove {
@@ -419,12 +419,18 @@ a:hover {color:lightsteelblue;}
       object-fit: cover;
         height:20vw;
         width: 20vw;
-        max-width:150px; /*To make the grids align nicer*/
+        max-width:120px; /*To make the grids align nicer*/
       background-color: transparent;
       margin: 3px;
       box-shadow: 0px 0px 20px rgba(0,0,0,.3); 
     }
     
+    .dark-mode-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+    
+}
 }
 
 

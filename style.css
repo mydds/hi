@@ -371,10 +371,10 @@ a:hover {color:lightsteelblue;}
         /*width: 75%;*/
         margin: 0 auto;
         padding: 2vm;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .text {
-    font-size: 18px;
+    font-size: 4vw;
     line-height: 1.5;
     }
     

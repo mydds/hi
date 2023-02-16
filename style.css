@@ -410,6 +410,7 @@ a:hover {color:lightsteelblue;}
 
 .popup-gridabove {
   display: flex;
+    flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
   background-color: transparent;
@@ -568,7 +569,7 @@ nav a:hover {
   max-width: 300px;
   position: absolute;
   z-index: 1;
-  top: calc(100% - 10px);
+  top: calc(100% - 50px);
 }
 
 .static-close-button {

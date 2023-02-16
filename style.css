@@ -406,16 +406,7 @@ a:hover {color:lightsteelblue;}
     max-width: 130px;
     margin: 5px;
   }
-  /* .popup-gridabove {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      background-color: transparent;
-      max-width:100%; /*To make the grids align nicer*/
-      box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-      transform: translate(-50%, -100%);
-    
-    }*/
+
 
 .popup-gridabove {
   display: flex;

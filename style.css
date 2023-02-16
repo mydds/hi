@@ -373,7 +373,7 @@ a:hover {color:lightsteelblue;}
         padding-left: 2vm;
         padding-right: 2vm;
         margin-top: 5px;
-        padding-top:12px;
+        padding-top:15px;
        /* text-align:justify;*/
     }
     .text {
@@ -413,7 +413,7 @@ a:hover {color:lightsteelblue;}
       background-color: transparent;
       max-width:100%; /*To make the grids align nicer*/
       box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-      transform: translate(-50%, -50%);
+      transform: translate(-10%, -60%);
     
     }
 
@@ -428,14 +428,15 @@ a:hover {color:lightsteelblue;}
     }
     
     .dark-mode-toggle {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 1px;
+  z-index:100;
     
 }
     .navbar-homeicon {
   height: 12px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 nav {

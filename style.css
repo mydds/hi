@@ -373,7 +373,7 @@ a:hover {color:lightsteelblue;}
         padding-left: 2vm;
         padding-right: 2vm;
         margin-top: 5px;
-        padding-top:5px;
+        padding-top:12px;
        /* text-align:justify;*/
     }
     .text {
@@ -413,8 +413,7 @@ a:hover {color:lightsteelblue;}
       background-color: transparent;
       max-width:100%; /*To make the grids align nicer*/
       box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-      transform: translate(-10%, -65%);
-       top:auto;
+      transform: translate(-50%, -50%);
     
     }
 
@@ -430,10 +429,20 @@ a:hover {color:lightsteelblue;}
     
     .dark-mode-toggle {
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   right: 1px;
     
 }
+    .navbar-homeicon {
+  height: 12px;
+  margin-left: 10px;
+}
+
+nav {
+  height: 12px;
+}
+    
+    
 }
 
 

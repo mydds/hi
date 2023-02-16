@@ -374,7 +374,7 @@ a:hover {color:lightsteelblue;}
         margin-top: 4px;
     }
     .text {
-    font-size: 4vw;
+    font-size: 3.4vw;
     line-height: 1.5;
     }
     
@@ -426,9 +426,9 @@ a:hover {color:lightsteelblue;}
     }
     
     .dark-mode-toggle {
-  position: relative;
-  bottom: 10px;
-  right: 5px;
+  position: absolute;
+  bottom: 5px;
+  right: 1px;
     
 }
 }

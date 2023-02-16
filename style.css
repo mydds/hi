@@ -413,7 +413,7 @@ a:hover {color:lightsteelblue;}
       background-color: transparent;
       max-width:100%; /*To make the grids align nicer*/
       box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-      transform: translate(-10%, -60%);
+      transform: translate(-50%, -100%);
     
     }
 

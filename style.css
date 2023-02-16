@@ -372,9 +372,9 @@ a:hover {color:lightsteelblue;}
         margin: 0 auto;
         padding-left: 2vm;
         padding-right: 2vm;
-        margin-top: 4px;
-        padding-top:1px;
-        text-align:justify;
+        margin-top: 5px;
+        padding-top:5px;
+       /* text-align:justify;*/
     }
     .text {
     font-size: 3.4vw;
@@ -413,7 +413,7 @@ a:hover {color:lightsteelblue;}
       background-color: transparent;
       max-width:100%; /*To make the grids align nicer*/
       box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-      transform: translate(-10%, -50%);
+      transform: translate(-10%, -65%);
        top:auto;
     
     }

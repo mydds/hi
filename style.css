@@ -415,7 +415,7 @@ a:hover {color:lightsteelblue;}
       box-shadow: 0 0 0px rgba(0, 0, 0, 0);
       transform: translate(-50%, -100%);
     
-    }*/
+    }
 .popup-gridabove {
   display: flex;
   flex-direction: row;
@@ -426,6 +426,14 @@ a:hover {color:lightsteelblue;}
   position: absolute;
   left: 50%;
   transform: translate(-50%, -100%);
+}*/
+
+.popup-gridabove {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    max-width: 480px;
 }
 
 

@@ -406,7 +406,7 @@ a:hover {color:lightsteelblue;}
     max-width: 130px;
     margin: 5px;
   }
-   .popup-gridabove {
+  /* .popup-gridabove {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -415,7 +415,20 @@ a:hover {color:lightsteelblue;}
       box-shadow: 0 0 0px rgba(0, 0, 0, 0);
       transform: translate(-50%, -100%);
     
-    }
+    }*/
+.popup-gridabove {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: transparent;
+  max-width: 480px; 
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
 
     .popup-gridabove-item {
       object-fit: cover;
